@@ -28,3 +28,14 @@ def load_csv(csvpath):
         for row in csvreader:
             data.append(row)
     return data
+
+
+# we want to build a function that saves the qualifying data as a file
+
+def save_csv(output_path):
+    with open(output_path, 'w', newline='') as csvfile:
+        csvwriter = csv.writer(csvfile)
+        header = []
+        csvwriter.writerow(header)
+        for row in csvwriter:
+            csvwriter.writerow(row)
