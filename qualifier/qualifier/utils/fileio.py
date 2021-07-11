@@ -30,12 +30,18 @@ def load_csv(csvpath):
     return data
 
 
-# we want to build a function that saves the qualifying data as a file
+def save_csv(csvpath, qualifying_loans):
+    """Writes to a CSV file 
 
-def save_csv(output_path):
-    with open(output_path, 'w', newline='') as csvfile:
+    Args:
+        csvpath (Path): the file path name is provided in save_qualifying_loans
+
+    Returns:
+        A csv file with rows of data from save_qualifying_loans
+
+    """
+    with open(csvpath, 'w', newline='') as csvfile:
         csvwriter = csv.writer(csvfile)
         header = []
         csvwriter.writerow(header)
-        for row in csvwriter:
-            csvwriter.writerow(row)
+        csvwriter.writerow(qualifying_loans)
