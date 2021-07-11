@@ -24,15 +24,7 @@ from qualifier.filters.debt_to_income import filter_debt_to_income
 from qualifier.filters.loan_to_value import filter_loan_to_value
 
 
-# we want to build a function that saves the qualifying data as a file
 
-def save_csv(output_path):
-    with open(output_path, 'w', newline='') as csvfile:
-        csvwriter = csv.writer(csvfile)
-        header = []
-        csvwriter.writerow(header)
-        for row in csvwriter:
-            csvwriter.writerow(row)
 
 
 def load_bank_data():
@@ -121,8 +113,19 @@ def save_qualifying_loans(qualifying_loans):
     """
     # @TODO: Complete the usability dialog for savings the CSV Files.
     # YOUR CODE HERE!
-
-
+    if len(qualifying_loans) == 0:
+        sys.exit("You have no qualifying loans")
+    else:
+        save_file = questionary.confirm("Do you want to save your qualifying loans in a .csv?").ask()
+    
+    # if the user wants to save the file, give the user a prompt for a file path
+        if save_file == True:
+            csvpath = Path(questionary.text("Please enter a path name to save").ask())
+    # save these results as a .csv file by using save_csv() from fileio
+            save_csv(csvpath, qualifying_loans)
+    #If user doesn't want to save the file, exit app
+        else:
+            sys.exit("You won't save qualifying loans.")
 def run():
     """The main function for running the script."""
 
