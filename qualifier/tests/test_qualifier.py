@@ -37,3 +37,5 @@ def test_filters():
 
     # @TODO: Test the new save_csv code!
     # YOUR CODE HERE!
+def test_save_csv():
+    assert Path('./tests/data/output/qualifying_loans.csv').exists()
