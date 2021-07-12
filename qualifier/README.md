@@ -1,19 +1,18 @@
-# Project Title
+# Loan Qualifier Application
 
-Just after the title, introduce your project by describing attractively what the project is about and what is the main problem that inspires you to create this project or what is the main contribution for the potential user of your project.
-
+This is a loan qualifier application. It uses CLI to filter a list of loans based on how well the applicants match a criteria based on their independent qualifications.
 ---
 
 ## Technologies
 
-Describe the technologies required to use your project such as programming languages, libraries, frameworks, and operating systems. Be sure to include the specific versions of any critical dependencies that you have used in the stable version of your project.
-
+The project used python 3.7.10. It included the following packages: questionary, fire, csv, pathlib.
 ---
 
 ## Installation Guide
 
-In this section, you should include detailed installation notes containing code blocks and screenshots.
+Before you can run this application, you must install the following packages: 1) fire ("pip install fire") and 2) questionary ("pip install questionary")
 
+You also need to import sys, import csv, and import Path from pathlib
 ---
 
 ## Examples
@@ -30,7 +29,9 @@ This section should include screenshots, code blocks, or animations explaining h
 
 ## Contributors
 
-In this section, list all the people who contribute to this project; since you may want to be reached by recruiters or potential collaborators, include your contact e-mail, and optionally your LinkedIn or Twitter profile.
+Contributors: Kian Momeni
+
+Contact Information: kmomeni97@gmail.com
 
 ---
 
